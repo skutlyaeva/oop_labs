@@ -7,13 +7,9 @@ std::string func(unsigned int n) {
     for(int i = 0; i < 32; i++) {
         binary[31 - i] = (n >> i) & 1;
     }
-    std::string result = "[";
+    std::string result;
     for(int i = 0; i < 32; i++) {
         result += std::to_string(binary[i]);
-        if (i < 31){
-            result += ",";
-        }
     }
-    result += "]";
     return result;
 }

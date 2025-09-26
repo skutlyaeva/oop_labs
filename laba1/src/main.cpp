@@ -11,7 +11,15 @@ int main() {
         std::cout << "incorrect input" << std::endl;
         return 1;
     }
-    std::cout << n << " -> " << func(n) << std::endl;
+    std::string result = func(n);
+    std::cout << n << " -> [";
+    for (int i = 0; i < 32; i++) {
+        std::cout << result[i];  // выводим i-й символ строки
+        if (i < 31) {
+            std::cout << ",";
+        }
+    }
+    std::cout << "]" << std::endl;
     
     return 0;
 }
